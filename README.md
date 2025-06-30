@@ -7,4 +7,4 @@ The following repository is a repository for both Andrew Elakawi and Georgia Ayo
 
 
 ## Repository Setup
-Download blah blah 
+Download blah blah blah
