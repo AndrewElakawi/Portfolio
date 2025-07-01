@@ -30,4 +30,8 @@ Add a simple menu for the user
 #### Stretch Goals
 
 ## Repository Setup
-Download blah blah blah
+To download the repository on your system, input 
+
+    git clone https://github.com/AndrewElakawi/Portfolio.git
+
+If a branch merge has occured after you clone the repo, use the "git pull" function to pull the latest version of the repository.
