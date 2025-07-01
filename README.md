@@ -14,7 +14,7 @@ The following repository is a repository for both Andrew Elakawi and Georgia Ayo
 #### How Will it Work?
 - Let the user enter the name (or ID) of a satellite
 - Fetch basic data about that satellite from a public API (like name, launch date, contry, etc)
-- Optionally: list currently popular satellites to choose from
+- Optional: list currently popular satellites to choose from
 - Display that information in the console
 
 #### Stretch Goals
