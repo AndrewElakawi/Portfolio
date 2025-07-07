@@ -50,15 +50,25 @@ try:
             pick_index = int(pick) - 1 #Convert user input to the right list index
             if 0 <= pick_index < len(matches[:10]): #Check if the index is within the range of the matches
                 sat = matches[pick_index] #Get the selected satellite from the matches list
+
                 print(f"\nYou picked: {sat['OBJECT_NAME']} (NORAD ID: {sat['NORAD_CAT_ID']})")
                 print(f"International Designator: {sat['OBJECT_ID']}")
                 print(f"Epoch: {sat['EPOCH']}")
-                print(f"Inclination: {sat['INCLINATION']} degrees")
-                print(f"Eccentricity: {sat['ECCENTRICITY']}")
-                print(f"Mean Motion: {sat['MEAN_MOTION']} revs/day")
-                print(f"RA Ascending Node: {sat['RA_OF_ASC_NODE']} degrees")
-                print(f"Argument of Perigee: {sat['ARG_OF_PERICENTER']} degrees")
-                print(f"Mean Anomaly: {sat['MEAN_ANOMALY']} degrees")
+
+                # Fields to display satellite orbital elements. In the future, more fields can be added as needed.
+                fields = [
+                    ("Inclination", "INCLINATION", "degrees"),
+                    ("Eccentricity", "ECCENTRICITY", ""),
+                    ("Mean_Motion", "MEAN_MOTION", "revs/day"),
+                    ("RA_Ascending_Node", "RA_OF_ASC_NODE", "degrees"),
+                    ("Argument_of_Perigee", "ARG_OF_PERICENTER", "degrees"),
+                    ("Mean_Anomaly", "MEAN_ANOMALY", "degrees"),
+                ]
+
+                for label, key, unit in fields:
+                    value = sat[key]
+                    print(f"{label}: {value} {unit}".strip()) #.strip() removes any leading or trailing whitespace from the string.
+
             else:
                 print("Number out of range.") #This will print an error message if the user input is less than 1 or greater than 10.
         else:
