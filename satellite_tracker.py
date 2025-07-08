@@ -56,6 +56,7 @@ try:
                 print(f"Epoch: {sat['EPOCH']}")
 
                 # Fields to display satellite orbital elements. In the future, more fields can be added as needed.
+                
                 fields = [
                     ("Inclination", "INCLINATION", "degrees"),
                     ("Eccentricity", "ECCENTRICITY", ""),
